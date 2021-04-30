@@ -1,0 +1,92 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %} 
+
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+    <!-- /.navbar -->
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Main content -->
+        <section class="content-header">
+        <div class="container-fluid">
+            <div class="card card-info">
+            <div class="card-header">
+                <h3 class="card-title"><b>Список паспортов эксплуатации</b></h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+                <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                    <div class="card-header">
+                        <div class="card-tools">
+                        <div class="input-group input-group-sm" style="width: 150px;">
+                            <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                            <div class="input-group-append">
+                            <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body table-responsive p-0">
+                        <table class="table table-hover text-nowrap">
+                        <thead>
+                            <tr>
+                            <th>Номер</th>
+                            <th>Наименование паспорта</th>
+                            <th>Диспетчерское наименование</th>
+                            <th>Ф.И.О.</th>
+                            <th>Дата</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td>1</td>
+                            <td>ПАСПОРТ ЗРУ-6(10)кВ (КРУН-6: РП)-6 (10)кВ</td>
+                            <td>БКНС-3, УПП-34</td>
+                            <td>Наурызбаев М.М.</td>
+                            <td>11-7-2020</td>
+                            </tr>
+                            <tr>
+                            <td>2</td>
+                            <td>ПАСПОРТ КРУН-6: РП-6 (10)кВ</td>
+                            <td>ЗРУ-10 (ГДР)</td>
+                            <td>Акпанов М.М.</td>
+                            <td>1-10-2020</td>
+                            </tr>
+                            <tr>
+                            <td>3</td>
+                            <td>ПАСПОРТ РП-6 (10)кВ</td>
+                            <td>УПП-34</td>
+                            <td>Мамырбеков М.М.</td>
+                            <td>18-5-2020</td>
+                            </tr>
+                            <tr>
+                            <td>4</td>
+                            <td>ПАСПОРТ КРУН-10кВ</td>
+                            <td>БКНС-3</td>
+                            <td>Тамызбаев М.М.</td>
+                            <td>18-12-2020</td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+            </div>
+            </div>
+            <!-- /.card-info -->
+        </div>
+        <!-- /.container-fluid -->
+        </section>
+    </div>
+  
+</div>
+
+{% endblock %}

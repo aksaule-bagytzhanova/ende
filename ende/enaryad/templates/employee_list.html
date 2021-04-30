@@ -1,0 +1,61 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<div class="wrapper">
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+<section class="content">
+    <div class="container-fluid">
+      <!-- SELECT2 EXAMPLE -->
+        <div class="card card-info">
+            <div class="card-header">
+            <h3 class="card-title"><b>Список данных</b></h3>
+            </div>
+            <section class="content">
+            <div class="container-fluid">
+              <div class="card-body">
+                <div class="uper">
+                  <div class="alert alert-success">
+                      
+                  </div><br />
+        
+                  <div class="card-body table-responsive p-0">
+                  <table class="table table-hover text-nowrap">
+                    <thead>
+                        <tr>
+                          <td>Userid</td>
+                          <td>Username</td>
+                          <td>Password</td>
+                          <td>Employee name</td>
+                          <td>Employee surname</td>
+                          <td>Employee position</td>
+                          <td>Action</td>
+                          
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for i in employee %}
+                        <tr>
+                          
+                            <td>{{i.user}}</td>
+                            <td>{{i.username}}</td>
+                            <td>{{i.password}}</td>
+                            <td>{{i.name}}</td>
+                            <td>{{i.surname}}</td>
+                            <td>{{i.position}}</td>
+                            <td><a href="{% url 'employee' i.id %}" class="btn btn-primary">See</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                  </table>
+                  </div>
+                  
+                </div>
+            </div>
+          </div>
+        </div>
+    </div><!-- /.container-fluid -->
+  </section>
+</div>
+</div>
+{% endblock %}

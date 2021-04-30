@@ -1,0 +1,746 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>Наряд-допуск</h1>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <!-- SELECT2 EXAMPLE -->
+      <div class="card card-info">
+        <div class="card-header">
+          <h3 class="card-title">Наряд-допуск для работы в электроустановках</h3>
+
+          <div class="card-tools">
+            <button type="button" class="btn btn-tool" data-card-widget="collapse">
+              <i class="fas fa-minus"></i>
+            </button>
+            
+          </div>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Организация</label>
+                <select class="form-control select2" style="width: 100%;">
+                  <option selected="selected">ТОО "Мангистауэнергомунай"</option>
+                </select>
+              </div>
+              <!-- /.form-group -->
+              <div class="form-group">
+                  <label>Участок</label>
+                  <select class="form-control select2" style="width: 100%;">
+                    <option selected="selected">№2</option>
+                  </select>
+              </div>
+              <!-- /.form-group -->
+            </div>
+            <!-- /.col -->
+            <div class="col-md-6">
+              <div class="form-group">
+                  <label>Подразделение</label>
+                  <select class="form-control select2" style="width: 100%;">
+                    <option selected="selected">ПЭС-2</option>
+                  </select>
+              </div>
+              <!-- /.form-group -->
+              <div class="form-group">
+                  <label>Руководителю работ</label>
+                  <select class="form-control select2" style="width: 100%;">
+                    <option selected="selected">Шалабаев</option>
+                  </select>
+              </div>
+              <!-- /.form-group -->
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                  <label>Допускающему</label>
+                  <select class="form-control select2" style="width: 100%;">
+                    <option selected="selected">Допускающему</option>
+                  </select>
+              </div>
+              <!-- /.form-group -->
+              <div class="form-group">
+                  <label>С членами бригад</label>
+                  <select class="form-control select2" style="width: 100%;">
+                    <option selected="selected">С членами бригад</option>
+                  </select>
+              </div>
+              <!-- /.form-group -->
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                  <label>Производителю работ</label>
+                  <select class="form-control select2" style="width: 100%;">
+                    <option selected="selected">Производителю работ</option>
+                  </select>
+              </div>
+              <!-- /.form-group -->
+              <div class="form-group">
+                  <label>Наблюдающему</label>
+                  <select class="form-control select2" style="width: 100%;">
+                    <option selected="selected">Наблюдающему</option>
+                  </select>
+              </div>
+              <!-- /.form-group -->
+            </div>
+              <div class="col-md-6">
+                  <div class="form-group">
+                  <label>Категория работ</label>
+                  <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected">Категория работ</option>
+                  </select>
+                  </div>
+                  <!-- /.form-group -->
+                  <div class="form-group">
+                      <label>Время аварийной готовности</label>
+
+                      <input type="date" class="form-control" id="start_date" placeholder="Date">
+
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="form-group">
+                  <label>Поручается</label>
+                  <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected">Поручается</option>
+                  </select>
+                  </div>
+                  <!-- /.form-group -->
+                  <div class="form-group">
+                      <label>Объект</label>
+                      <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected">Объект</option>
+                      </select>
+                  </div>
+              </div>
+
+              <div class="col-md-12">
+                  <div class="form-group">
+                      <label>Работу начать</label>
+                      <input type="date" class="form-control" id="start_date" placeholder="Date">
+
+                  </div>
+              </div>
+            <div class="col-md-12">
+              <div class="form-group">
+                  <label>Работу закончить</label>
+                  <input type="date" class="form-control" id="start_date" placeholder="Date">
+
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-12">
+                  <h4 class="text-primary">Меры по подготовке рабочих мест</h4>
+                  <div id="logins-part" class="content" role="tabpanel" aria-labelledby="logins-part-trigger">
+                      <div class="form-group">
+                          <label>Наименования электроустановок, в которых нужно провести отключения и установить заземление</label>
+                          <textarea class="form-control" rows="3" placeholder="Enter..." style="margin-top: 0px; margin-bottom: 0px; height: 60px; width: 100%;"></textarea>
+                      </div>
+                      <div class="form-group">
+                          <label>Что должно быть отключено и где заземлено</label>
+                          <textarea class="form-control" rows="3" placeholder="Enter..." style="margin-top: 0px; margin-bottom: 0px; height: 60px; width: 100%;"></textarea>
+                      </div>
+                      <div class="form-group">
+                          <label>Отдельные указания</label>
+                          <textarea class="form-control" rows="3" placeholder="Enter..." style="margin-top: 0px; margin-bottom: 0px; height: 60px; width: 100%;"></textarea>
+                      </div>
+                      
+                      <div class="form-group">
+                        <label>Наряд выдал</label>
+                        <input type="text" class="form-control" name="place" value=""/>
+                    </div>
+                  </div>
+                 
+                  <div id="information-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger">
+                      <div class="form-group">
+                          <label for="exampleInputFile">Открыть однолинейную схему</label>
+                          <div class="input-group">
+                              <div class="custom-file">
+                                  <input type="file" class="custom-file-input" id="exampleInputFile">
+                                  <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                              </div>
+                          <div class="input-group-append">
+                              <span class="input-group-text">Upload</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <button type="submit" class="btn btn-info">Отправить на согласование</button>
+          </div>
+        </div>
+      </div>
+        </div>
+  </div>
+      <!-- /.card -->
+
+      <div class="card card-info">
+          <div class="card-header">
+            <h3 class="card-title">Регистрация целевого инструктажа при первичном допуске</h3>
+            <div class="card-tools">
+              <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                <i class="fas fa-minus"></i>
+              </button>
+              
+            </div>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6">
+                  <h5>Инструктаж провел</h5>
+                  <div class="form-group">
+                      <label>Лицо выдавшее наряд</label>
+                      <select class="form-control select2" style="width: 100%;">
+                          <option selected="selected">Лицо выдавшее наряд</option>
+                      </select>
+                  </div>
+                  <!-- /.form-group -->
+                  <div class="form-group">
+                      <label>Подпись (фамилия, инициалы)</label>
+                      <select class="form-control select2" style="width: 100%;">
+                          <option selected="selected">Подпись (фамилия, инициалы)</option>
+                      </select>
+                  </div>
+                <!-- /.form-group -->
+              </div>
+              <!-- /.col -->
+              <div class="col-12 col-sm-6">
+                  <div class="form-group">
+                      <h5>Инструктаж получил</h5>
+                      <label>Ответственный руководитель работ</label>
+                      <select class="form-control select2" style="width: 100%;">
+                        <option selected="selected">Ответственный руководитель работ</option>
+                      </select>
+                  </div>
+                  <!-- /.form-group -->
+                  <div class="form-group">
+                      <label>Подпись (фамилия, инициалы)</label>
+                      <select class="form-control select2" style="width: 100%;">
+                        <option selected="selected">Подпись (фамилия, инициалы)</option>
+                      </select>
+                  </div>
+                  <!-- /.form-group -->
+              </div> 
+              <div id="information-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger">
+                  <button type="submit" class="btn btn-info">Сохранить</button>
+              </div>      
+            </div> 
+          </div>
+      </div>
+      <!-- /.card -->
+      <!-- SELECT2 EXAMPLE -->
+      <div class="card card-info">
+          <div class="card-header">
+            <h3 class="card-title">Разрешение на допуск</h3>
+            <div class="card-tools">
+              <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                <i class="fas fa-minus"></i>
+              </button>
+              
+            </div>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+              <h5 class="text-primary">Разрешение на подготовку рабочих мест и на допуск к работе получил</h5>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Наряд выдал</label>
+                  <select class="form-control select2" style="width: 100%;">
+                    <option selected="selected">Наряд выдал</option>
+                  </select>
+                </div>
+                <!-- /.form-group -->
+                <div class="form-group">
+                    <label>Подпись</label>
+                    <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected">Подпись</option>
+                    </select>
+                </div>
+                <!-- /.form-group -->
+              </div>
+              <!-- /.col -->
+              <div class="col-md-6">
+                <div class="form-group">
+                    <label>Фамилия</label>
+                    <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected">Фамилия</option>
+                    </select>
+                </div>
+              </div>
+              </div>
+              <h5 class="text-primary">Согласование на выполнение работ в зоне действия другого наряда</h5>
+              <div class="row">
+                  <div class="col-md-6">
+                      <div class="form-group">
+                          <label>Дата</label>
+                          <input type="date" class="form-control" id="start_date" placeholder="Date">
+                      </div>
+                      <div class="form-group">
+                          <label>Рабочие места подготовлены. Под напряжением остались</label>
+                          <textarea class="form-control" rows="5" placeholder="Enter..." style="margin-top: 0px; margin-bottom: 0px; height: 124px; width: 100%;"></textarea>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="form-group">
+                          <label>Согласовано</label>
+                          <select class="form-control select2" style="width:100%;">
+                              <option selected="selected">
+                                  Согласовано
+                              </option>
+                          </select>
+                      </div>
+                      <div class="form-group">
+                          <label>Допускающий</label>
+                          <select class="form-control select2" style="width:100%;">
+                              <option selected="selected">
+                                  Допускающий
+                              </option>
+                          </select>
+                      </div>
+                      <div class="form-group">
+                          <label>Ответсвенный руководитель работ</label>
+                          <select class="form-control select2" style="width:100%;">
+                              <option selected="selected">
+                                  Ответсвенный руководитель работ
+                              </option>
+                          </select>
+                      </div>
+                  </div>
+                  <button type="submit" class="btn btn-info">Отправить на согласование</button>
+              </div>
+          </div>
+      </div>
+      
+        
+      <div class="card card-info">
+          <div class="card-header">
+            <h3 class="card-title">Форма выявления опасностей и рисков при проведении работ повышенной опасности</h3>
+
+            <div class="card-tools">
+              <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                <i class="fas fa-minus"></i>
+              </button>
+            
+            </div>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Место работ</label>
+                  <select class="form-control select2" style="width: 100%;">
+                    <option selected="selected">Место работ</option>
+                  </select>
+                </div>
+                <!-- /.form-group -->
+                <div class="form-group">
+                    <label>№Наряд-допуска</label>
+                    <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected">№Наряд-допуска</option>
+                    </select>
+                </div>
+                <!-- /.form-group -->
+              </div>
+              <!-- /.col -->
+              <div class="col-md-6">
+                <div class="form-group">
+                    <label>Компания</label>
+                    <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected">Компания</option>
+                    </select>
+                </div>
+                <!-- /.form-group -->
+                <div class="form-group">
+                    <label>Работа/задание</label>
+                    <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected">Работа/задание</option>
+                    </select>
+                </div>
+                <!-- /.form-group -->
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+                    <label>Опасности и риски выявил (Ф.И.О., должность)</label>
+                    <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected">Опасности и риски выявил (Ф.И.О., должность)</option>
+                    </select>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+                    <label>Производителю работ</label>
+                    <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected">Производителю работ</option>
+                    </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label>Дата</label>
+                      <input type="date" class="form-control" id="start_date" placeholder="Date">
+              </div>
+            </div>
+              <div class="col-md-12">                  
+                  <div class="card">
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                      <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                            <th style="width: 25px">Последовательность основных этапов работы</th>
+                            <th style="width: 40px">Опасности и риски/возможные потенциальные проишествия</th>
+                            <th style="width: 10px">Меры контроля</th>
+                            <th style="width: 40px">Имеются ли меры контроля</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><textarea class="form-control" rows="2" placeholder="Enter..." style="margin-top: 0px; margin-bottom: 0px; height: 40px; width: 100%;"></textarea></td>
+                            <td><textarea class="form-control" rows="2" placeholder="Enter..." style="margin-top: 0px; margin-bottom: 0px; height: 40px; width: 100%;"></textarea></td>
+                            <td><textarea class="form-control" rows="2" placeholder="Enter..." style="margin-top: 0px; margin-bottom: 0px; height: 40px; width: 100%;"></textarea>
+                            </td>
+                            <td><div class="form-group">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radio1">
+                                <label class="form-check-label">Да</label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radio1" checked>
+                                <label class="form-check-label">Нет</label>
+                              </div>
+                            </div></td>
+                          </tr>
+                          <tr>
+                            <td><textarea class="form-control" rows="2" placeholder="Enter..." style="margin-top: 0px; margin-bottom: 0px; height: 40px; width: 100%;"></textarea></td>
+                            <td><textarea class="form-control" rows="2" placeholder="Enter..." style="margin-top: 0px; margin-bottom: 0px; height: 40px; width: 100%;"></textarea></td>
+                            <td><textarea class="form-control" rows="2" placeholder="Enter..." style="margin-top: 0px; margin-bottom: 0px; height: 40px; width: 100%;"></textarea>
+                            </td>
+                            <td><div class="form-group">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radio1">
+                                <label class="form-check-label">Да</label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radio1" checked>
+                                <label class="form-check-label">Нет</label>
+                              </div>
+                            </div></td>
+                          </tr>
+                          <tr>
+                            <td><textarea class="form-control" rows="2" placeholder="Enter..." style="margin-top: 0px; margin-bottom: 0px; height: 40px; width: 100%;"></textarea></td>
+                            <td><textarea class="form-control" rows="2" placeholder="Enter..." style="margin-top: 0px; margin-bottom: 0px; height: 40px; width: 100%;"></textarea></td>
+                            <td><textarea class="form-control" rows="2" placeholder="Enter..." style="margin-top: 0px; margin-bottom: 0px; height: 40px; width: 100%;"></textarea>
+                            </td>
+                            <td><div class="form-group">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radio1">
+                                <label class="form-check-label">Да</label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radio1" checked>
+                                <label class="form-check-label">Нет</label>
+                              </div>
+                            </div></td>
+                          </tr>
+                          <tr>
+                            <td><textarea class="form-control" rows="2" placeholder="Enter..." style="margin-top: 0px; margin-bottom: 0px; height: 40px; width: 100%;"></textarea></td>
+                            <td><textarea class="form-control" rows="2" placeholder="Enter..." style="margin-top: 0px; margin-bottom: 0px; height: 40px; width: 100%;"></textarea></td>
+                            <td><textarea class="form-control" rows="2" placeholder="Enter..." style="margin-top: 0px; margin-bottom: 0px; height: 40px; width: 100%;"></textarea>
+                            </td>
+                            <td><div class="form-group">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radio1">
+                                <label class="form-check-label">Да</label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radio1" checked>
+                                <label class="form-check-label">Нет</label>
+                              </div>
+                            </div></td>
+                          </tr>
+                          <tr>
+                            <td><textarea class="form-control" rows="2" placeholder="Enter..." style="margin-top: 0px; margin-bottom: 0px; height: 40px; width: 100%;"></textarea></td>
+                            <td><textarea class="form-control" rows="2" placeholder="Enter..." style="margin-top: 0px; margin-bottom: 0px; height: 40px; width: 100%;"></textarea></td>
+                            <td><textarea class="form-control" rows="2" placeholder="Enter..." style="margin-top: 0px; margin-bottom: 0px; height: 40px; width: 100%;"></textarea>
+                            </td>
+                            <td><div class="form-group">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radio1">
+                                <label class="form-check-label">Да</label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radio1" checked>
+                                <label class="form-check-label">Нет</label>
+                              </div>
+                            </div></td>
+                          </tr>
+                          <tr>
+                            <td><textarea class="form-control" rows="2" placeholder="Enter..." style="margin-top: 0px; margin-bottom: 0px; height: 40px; width: 100%;"></textarea></td>
+                            <td><textarea class="form-control" rows="2" placeholder="Enter..." style="margin-top: 0px; margin-bottom: 0px; height: 40px; width: 100%;"></textarea></td>
+                            <td><textarea class="form-control" rows="2" placeholder="Enter..." style="margin-top: 0px; margin-bottom: 0px; height: 40px; width: 100%;"></textarea>
+                            </td>
+                            <td><div class="form-group">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radio1">
+                                <label class="form-check-label">Да</label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radio1" checked>
+                                <label class="form-check-label">Нет</label>
+                              </div>
+                            </div></td>
+                          </tr>
+                          <tr>
+                            <td>Опасности и риски выявил<textarea class="form-control" rows="2" placeholder="Enter..." style="margin-top: 0px; margin-bottom: 0px; height: 40px; width: 100%;"></textarea></td>
+                            <td>(Ф.И.О., должность, подпись)<textarea class="form-control" rows="2" placeholder="Enter..." style="margin-top: 0px; margin-bottom: 0px; height: 40px; width: 100%;"></textarea></td>
+                            <td>Форму утвердил<textarea class="form-control" rows="2" placeholder="Enter..." style="margin-top: 0px; margin-bottom: 0px; height: 40px; width: 100%;"></textarea>
+                            </td>
+                            <td>(Ф.И.О., должность, подпись)</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <button type="submit" class="btn btn-info">Отправить на согласование</button>
+                  </div>
+                </div>  
+              </div>
+            </div>
+      </div>
+      
+      <!-- SELECT2 EXAMPLE -->
+      <div class="card card-info">
+          <div class="card-header">
+            <h3 class="card-title">Ежедневный допуск к работе и время ее окончания</h3>
+            <div class="card-tools">
+              <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                <i class="fas fa-minus"></i>
+              </button>
+              
+            </div>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+              <h5 class="text-primary">Бригада получила целевой инструктаж и допущена на подготовленное рабочее место</h5>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Наименование рабочего места</label>
+                  <select class="form-control select2" style="width: 100%;">
+                    <option selected="selected">Наименование рабочего места</option>
+                  </select>
+                </div>
+                <!-- /.form-group -->
+                <div class="form-group">
+                    <label>Подпись допускающего</label>
+                    <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected">Подпись допускающего</option>
+                    </select>
+                </div>
+                <!-- /.form-group -->
+              </div>
+              <!-- /.col -->
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label>Дата</label>
+                      <input type="date" class="form-control" id="start_date" placeholder="Date">
+                  </div>
+                  <div class="form-group">
+                      <label>Подпись производителя работ (наблюдающего)</label>
+                      <select class="form-control select2" style="width: 100%;">
+                        <option selected="selected">Подпись производителя работ</option>
+                      </select>
+                  </div>
+                  </div>
+              </div>
+              <h5 class="text-primary">Работа закончена, бригада удалена</h5>
+              <div class="row">
+                  <div class="col-md-6">
+                      <div class="form-group">
+                          <label>Дата</label>
+                          <input type="date" class="form-control" id="start_date" placeholder="Date">
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="form-group">
+                          <label>Подпись производителя работ (наблюдающего)</label>
+                          <select class="form-control select2" style="width: 100%;">
+                          <option selected="selected">Подпись производителя работ</option>
+                          </select>
+                      </div>
+                  </div>
+              </div>
+
+              <h5 class="text-primary">Изменения в составе бригады</h5>
+              <div class="row">
+                  <div class="col-md-6">
+                      <div class="form-group">
+                          <label>Наименование рабочего места</label>
+                          <select class="form-control select2" style="width: 100%;">
+                          <option selected="selected">Наименование рабочего места</option>
+                          </select>
+                      </div>
+                      <div class="form-group">
+                          <label>Подпись допускающего</label>
+                          <select class="form-control select2" style="width: 100%;">
+                            <option selected="selected">Подпись допускающего</option>
+                          </select>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="form-group">
+                          <label>Дата</label>
+                          <input type="date" class="form-control" id="start_date" placeholder="Date">
+                      </div>
+                      <div class="form-group">
+                          <label>Подпись производителя работ (наблюдающего)</label>
+                          <select class="form-control select2" style="width: 100%;">
+                            <option selected="selected">Подпись производителя работ</option>
+                          </select>
+                      </div>
+                  </div>
+              </div>
+              <h5 class="text-primary">Регистрация целевого инструктажа при первичном допуске</h5>
+              <div class="row">
+                  <div class="col-md-6">
+                      <div class="form-group">
+                          <label>Допускающий</label>
+                          <textarea class="form-control" rows="5" placeholder="Enter..." style="margin-top: 0px; margin-bottom: 0px; height: 60px; width: 100%;"></textarea>
+                      </div>
+                      <div class="form-group">
+                          <label>Рабочие места подготовлены. Под напряжением остались</label>
+                          <textarea class="form-control" rows="5" placeholder="Enter..." style="margin-top: 0px; margin-bottom: 0px; height: 60px; width: 100%;"></textarea>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="form-group">
+                          <label>Ответственный руководитель работ 
+                               Члены бригады</label>
+                          <textarea class="form-control" rows="5" placeholder="Enter..." style="margin-top: 0px; margin-bottom: 0px; height: 60px; width: 100%;"></textarea>
+                      </div>
+                      <div class="form-group">
+                          <label>Производитель работ(наблюдающий)
+                              Члены бригады</label>
+                          <textarea class="form-control" rows="5" placeholder="Enter..." style="margin-top: 0px; margin-bottom: 0px; height: 60px; width: 100%;"></textarea>
+                      </div>
+                  </div>
+                  <button type="submit" class="btn btn-info">Отправить на согласование</button>
+              </div>
+          </div>
+      </div>
+
+        <!-- SELECT2 EXAMPLE -->
+      <div class="card card-info">
+          <div class="card-header">
+            <h3 class="card-title">Работа полностью закончена, бригада удалена, заземления, установленные бригадой, сняты</h3>
+
+            <div class="card-tools">
+              <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                <i class="fas fa-minus"></i>
+              </button>
+              
+            </div>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Сообщено (кому)</label>
+                  <select class="form-control select2" style="width: 100%;">
+                    <option selected="selected">Сообщено (кому)</option>
+                  </select>
+                </div>
+                <!-- /.form-group -->
+                <div class="form-group">
+                    <label>Производитель работ (наблюдающий)</label>
+                    <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected">Производитель работ (наблюдающий)</option>
+                    </select>
+                </div>
+                <!-- /.form-group -->
+              </div>
+              <!-- /.col -->
+              <div class="col-md-6">
+                <div class="form-group">
+                    <label>(фамилия, инициалы)</label>
+                    <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected">(фамилия, инициалы)</option>
+                    </select>
+                </div>
+                <!-- /.form-group -->
+                <div class="form-group">
+                    <label>подпись (фамилия, инициалы)</label>
+                    <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected">подпись (фамилия, инициалы)</option>
+                    </select>
+                </div>
+                <!-- /.form-group -->
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+                    <label>Ответственный руководитель работ</label>
+                    <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected">Ответственный руководитель работ</option>
+                    </select>
+                </div>
+                <!-- /.form-group -->
+                <div class="form-group">
+                    <label>Допускающий</label>
+                    <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected">Допускающий</option>
+                    </select>
+                </div>
+                <!-- /.form-group -->
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+                    <label>подпись (фамилия, инициалы)</label>
+                    <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected">подпись (фамилия, инициалы)</option>
+                    </select>
+                </div>
+                <!-- /.form-group -->
+                <div class="form-group">
+                    <label>подпись (фамилия, инициалы)</label>
+                    <select class="form-control select2" style="width: 100%;">
+                      <option selected="selected">подпись (фамилия, инициалы)</option>
+                    </select>
+                </div>
+                <!-- /.form-group -->
+              </div>
+              <button type="submit" class="btn btn-info">Отправить в архив</button>
+          </div>  
+      </div>
+      </div>
+  </div>
+</div>
+
+
+{% endblock %}

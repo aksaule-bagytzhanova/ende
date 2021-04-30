@@ -1,0 +1,384 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+    <!-- /.navbar -->
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Main content -->
+        <section class="content-header">
+        <div class="container-fluid">
+            <div class="card card-info">
+            <div class="card-header">
+                <h3 class="card-title"><strong>Паспорт блок управления электродвигателем</strong></h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- /.form-group -->
+                        <div class="form-group">
+                            <label for="organization">Организация</label>
+                            <input type="organization" class="form-control" id="organization" placeholder="Организация">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="passport">№ Паспорта</label>
+                            <input type="passport" class="form-control" id="passport" placeholder="№ Паспорта">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="passport">№ Наряд-допуска</label>
+                            <input type="email" class="form-control" id="passport" placeholder="№ Наряд-допуска">
+                        </div>
+                        <!-- /.form-group -->
+                    </div>
+                    <!-- /.col -->
+
+                    <div class="col-12 col-sm-6">
+                        <!-- /.form-group start-->
+                        <div class="form-group">
+                            <label for="department">Подразделение</label>
+                            <input type="department" class="form-control" id="department" placeholder="Подразделение">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="disName">Диспетчерское наименование</label>
+                            <input type="disName" class="form-control" id="disName" placeholder="Диспетчерское наименование">
+                        </div>
+                        <!-- /.form-group -->
+                    </div>
+                    <!-- /.col -->
+                        <img src="{% static '/images/circuit_map.png' %}" alt="cabelMap" class="center">
+                </div>
+                <!-- Main content -->
+                <div class="row">
+                    <div class="col-12">
+                    <div class="card">
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                        <div id="example2_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                        <table id="example2" class="table table-bordered dataTable dtr-inline collapsed" role="grid" aria-describedby="example2_info">
+                            <tbody>
+
+                                <tr role="row" class="odd">
+                                    <td class="text-center" colspan="2"><strong>1.Автоматический выключатель</strong></td>
+                                    <td class="text-center" colspan="2"><strong>5.Ключ управления</strong></td>
+                                </tr>
+
+                                <tr role="row" class="odd">
+                                    <td>1.1. Завод изготовитель №</td>
+                                    <td>
+                                        <div class="form-group">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </td>
+                                    <td>5.1. Завод изготовитель №</td>
+                                    <td>
+                                        <div class="form-group">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr role="row" class="even">
+                                    <td >1.2. Тип</td>
+                                    <td>
+                                        <div class="form-group">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </td>
+                                    <td>5.2.Тип</td>
+                                    <td>
+                                        <div class="form-group">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr role="row" class="odd">
+                                    <td >1.3. Год выпуска</td>
+                                    <td>
+                                        <div class="form-group">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </td>
+                                    <td class="text-center" colspan="2"><strong>6. Переключатель режима работ</strong></td>
+                                </tr>
+
+                                <tr role="row" class="even">
+                                    <td >1.4. Год ввода в эксплуатацию</td>
+                                    <td>
+                                        <div class="form-group">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </td>
+                                    <td>6.1. Тип</td>
+                                    <td>
+                                        <div class="form-group">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr role="row" class="odd">
+                                    <td >1.5. Номинальный ток А</td>
+                                    <td>
+                                        <div class="form-group">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </td>
+                                    <td class="text-center" colspan="2"><strong>7. Кабель от БУ до электродвигателя 0,4кВ</strong></td>
+                                </tr>
+
+                                <tr role="row" class="odd">
+                                    <td >1.6. Ток откл. кор. зам.</td>
+                                    <td>
+                                        <div class="form-group">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </td>
+                                    <td>7.1. Марка кабеля</td>
+                                    <td>
+                                        <div class="form-group">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr role="row" class="even">
+                                    <td >1.7. Ток откл. перегруз</td>
+                                    <td>
+                                        <div class="form-group">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </td>
+                                    <td>7.2. Сечение одной жилы</td>
+                                    <td>
+                                        <div class="form-group">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr role="row" class="odd">
+                                    <td >1.8. Номинальное напряжение</td>
+                                    <td>
+                                        <div class="form-group">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </td>
+                                    <td>7.3. Допустим. длительн. ток</td>
+                                    <td>
+                                        <div class="form-group">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr role="row" class="even">
+                                    <td class="text-center" colspan="2"><strong>2. Магнитный пускатель</strong></td>
+                                    <td>7.4. Номинальное напряжение</td>
+                                    <td>
+                                        <div class="form-group">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr role="row" class="odd">
+                                    <td >2.1. Завод изготовитель №</td>
+                                    <td>
+                                        <div class="form-group">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </td>
+                                    <td>7.5. Длина кабельной линий</td>
+                                    <td>
+                                        <div class="form-group">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr role="row" class="odd">
+                                    <td >2.1. Тип</td>
+                                    <td>
+                                        <div class="form-group">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </td>
+                                    <td class="text-center" colspan="2"><strong>8. Электродвигатель 0,4кВ</strong></td>
+                                </tr>
+
+                                <tr role="row" class="even">
+                                    <td>2.3. Номинальный ток</td>
+                                    <td>
+                                        <div class="form-group">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </td>
+                                    <td>8.1. Завод изготовитель №</td>
+                                    <td>
+                                        <div class="form-group">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr role="row" class="odd">
+                                    <td>2.4. Номинальное напряжение</td>
+                                    <td>
+                                        <div class="form-group">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </td>
+                                    <td>8.2. Тип</td>
+                                    <td>
+                                        <div class="form-group">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr role="row" class="even">
+                                    <td >2.5. Напряжение катушки</td>
+                                    <td>
+                                        <div class="form-group">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </td>
+                                    <td>8.3. Год выпуска</td>
+                                    <td>
+                                        <div class="form-group">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr role="row" class="odd">
+                                    <td class="text-center" colspan="2"><strong>3. Тепловое реле</strong></td>
+                                    <td>8.4. Год ввода в эксплуатацию</td>
+                                    <td>
+                                        <div class="form-group">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr role="row" class="odd">
+                                    <td>3.1. Завод изготовитель №</td>
+                                    <td>
+                                        <div class="form-group">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </td>
+                                    <td>8.5. Мощность</td>
+                                    <td>
+                                        <div class="form-group">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr role="row" class="even">
+                                    <td>3.2. Тип и ток срабатывания</td>
+                                    <td>
+                                        <div class="form-group">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </td>
+                                    <td>8.6. Номинальный ток</td>
+                                    <td>
+                                        <div class="form-group">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr role="row" class="odd">
+                                    <td class="text-center" colspan="2"><strong>4. Защита от исчезновения фаз</strong></td>
+                                    <td>8.7. Номинальное напряжение</td>
+                                    <td>
+                                        <div class="form-group">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr role="row" class="even">
+                                    <td>4.1. Тип реле (пускатель)</td>
+                                    <td>
+                                        <div class="form-group">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </td>
+                                    <td>8.8. Скорость вращения</td>
+                                    <td>
+                                        <div class="form-group">
+                                        <textarea class="form-control" rows="3"></textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                        <!-- /.dataTables-wrapper -->
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- /.form-group -->
+                        <div class="form-group">
+                            <label for="data">Дата</label>
+                            <input type="data" class="form-control" id="data" placeholder="Дата">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sign">Подпись</label>
+                            <input type="sign" class="form-control" id="sign" placeholder="Подпись">
+                        </div>
+                        <!-- /.form-group -->
+                    </div>
+                    <!-- /.col -->
+
+                    <div class="col-12 col-sm-6">
+                        <!-- /.form-group start-->
+                        <div class="form-group">
+                            <label for="department">Ф.И.О. исполнителя</label>
+                            <input type="email" class="form-control" id="department" placeholder="Ф.И.О. исполнителя">
+                        </div>
+
+                        <!-- /.form-group -->
+                    </div>
+                    <!-- /.col -->
+                    <div class="form-group">
+                        <label>Сведения о ремонте (указать: тип оборудования, краткое описание ремонта, наладки, испытания, установка запчастей).</label>
+                        <textarea class="form-control" rows="3" placeholder="Сведения о ремонте"></textarea>
+                    </div>
+                </div>
+                <div class="card-footer">
+                <button type="submit" class="btn btn-info">Отправить на проверку</button>
+                </div>
+            </div>
+            <!-- /.card-info -->
+        </div>
+        <!-- /.container-fluid -->
+        </section>
+    </div>
+    <!-- /.content-wrapper -->
+
+</div>
+</body>
+</html>
+
+{% endblock %}

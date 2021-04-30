@@ -1,0 +1,220 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+    <!-- /.navbar -->
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Main content -->
+        <section class="content-header">
+        <div class="container-fluid">
+            <div class="card card-info">
+            <div class="card-header">
+                <h3 class="card-title"><b>Паспорт высоковольтной кабельной линии</b></h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- /.form-group -->
+                        <div class="form-group">
+                            <label for="organization">Организация</label>
+                            <input type="email" class="form-control" id="organization" placeholder="Организация">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="passport">№ Паспорта</label>
+                            <input type="email" class="form-control" id="passport" placeholder="№ Паспорта">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="passport">№ Наряд-допуска</label>
+                            <input type="email" class="form-control" id="passport" placeholder="№ Наряд-допуска">
+                        </div>
+                        <!-- /.form-group -->
+                    </div>
+                    <!-- /.col -->
+
+                    <div class="col-12 col-sm-6">
+                        <!-- /.form-group start-->
+                        <div class="form-group">
+                            <label for="department">Подразделение</label>
+                            <input type="email" class="form-control" id="department" placeholder="Подразделение">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="disName">Диспетчерское наименование</label>
+                            <input type="email" class="form-control" id="disName" placeholder="Диспетчерское наименование">
+                        </div>
+                        <!-- /.form-group -->
+                    </div>
+                    <!-- /.col -->
+                    <div class="content-wrapper">
+                        <div class="container-fluid">
+                        <img src="{% static '/images/htc_map.png' %}" alt="zru" width="500" height="500">
+                        </div>
+                    </div>
+                </div>
+                <!-- Main content -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <div id="example2_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                                <table id="example2" class="table table-bordered dataTable dtr-inline collapsed" role="grid" aria-describedby="example2_info">
+                                    <tbody>
+
+                                        <tr role="row" class="odd">
+                                            <td class="text-center" colspan="2"><strong>1.Кабель 6кВ</strong></td>
+                                            <td>1.7. Способ прокладки КЛ</td>
+                                            <td>
+                                                <div class="form-group">
+                                                <textarea class="form-control" rows="3"></textarea>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr role="row" class="even">
+                                            <td>1.1. Завод изготовитель №</td>
+                                            <td>
+                                                <div class="form-group">
+                                                <textarea class="form-control" rows="3"></textarea>
+                                                </div>
+                                            </td>
+                                            <td class="text-center" colspan="2"><strong>2. Муфта концевая 6кВ</strong></td>
+                                        </tr>
+
+                                        <tr role="row" class="odd">
+                                            <td >1.2. Марка кабеля</td>
+                                            <td>
+                                                <div class="form-group">
+                                                <textarea class="form-control" rows="3"></textarea>
+                                                </div>
+                                            </td>
+                                            <td>2.1.Тип муфты на опоре</td>
+                                            <td>
+                                                <div class="form-group">
+                                                <textarea class="form-control" rows="3"></textarea>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr role="row" class="even">
+                                            <td >1.3. Сечение одной жилы</td>
+                                            <td>
+                                                <div class="form-group">
+                                                <textarea class="form-control" rows="3"></textarea>
+                                                </div>
+                                            </td>
+                                            <td >2.2. Срок в эксплуатации</td>
+                                            <td>
+                                                <div class="form-group">
+                                                <textarea class="form-control" rows="3"></textarea>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr role="row" class="odd">
+                                            <td >1.4. Допустимый длительный ток</td>
+                                            <td>
+                                                <div class="form-group">
+                                                <textarea class="form-control" rows="3"></textarea>
+                                                </div>
+                                            </td>
+                                            <td>2.3. Тип муфты на ячейке</td>
+                                            <td>
+                                                <div class="form-group">
+                                                <textarea class="form-control" rows="3"></textarea>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr role="row" class="even">
+                                            <td >1.5. Номинальное напряжение</td>
+                                            <td>
+                                                <div class="form-group">
+                                                <textarea class="form-control" rows="3"></textarea>
+                                                </div>
+                                            </td>
+                                            <td >2.4 Срок в эксплуатации</td>
+                                            <td>
+                                                <div class="form-group">
+                                                <textarea class="form-control" rows="3"></textarea>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr role="row" class="odd">
+                                            <td >1.6. Длина кабельной линии</td>
+                                            <td>
+                                                <div class="form-group">
+                                                <textarea class="form-control" rows="3"></textarea>
+                                                </div>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                                </div>
+                                <!-- /.dataTables-wrapper -->
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- /.form-group -->
+                        <div class="form-group">
+                            <label for="data">Дата</label>
+                            <input type="data" class="form-control" id="data" placeholder="Дата">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sign">Подпись</label>
+                            <input type="sign" class="form-control" id="sign" placeholder="Подпись">
+                        </div>
+                        <!-- /.form-group -->
+                    </div>
+                    <!-- /.col -->
+
+                    <div class="col-12 col-sm-6">
+                        <!-- /.form-group start-->
+                        <div class="form-group">
+                            <label for="department">Ф.И.О. исполнителя</label>
+                            <input type="email" class="form-control" id="department" placeholder="Ф.И.О. исполнителя">
+                        </div>
+
+                        <!-- /.form-group -->
+                    </div>
+                    <!-- /.col -->
+                    <div class="form-group">
+                        <label>Сведения о ремонте (указать: тип оборудования, краткое описание ремонта, наладки, испытания, установка запчастей).</label>
+                        <textarea class="form-control" rows="3" placeholder="Сведения о ремонте"></textarea>
+                    </div>
+                </div>
+                <div class="card-footer">
+                <button type="submit" class="btn btn-info">Отправить на проверку</button>
+                </div>
+            </div>
+            <!-- /.card-info -->
+        </div>
+        <!-- /.container-fluid -->
+        </section>
+    </div>
+    <!-- /.content-wrapper -->
+
+</div>
+</body>
+
+{% endblock %}

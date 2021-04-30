@@ -1,0 +1,119 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>Profile</h1>
+        </div>
+        
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+
+  <section class="content">
+    <div class="container-fluid">
+
+    <div class="row gutters-sm">
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex flex-column align-items-center text-center">
+              <img src="images/user.jpg" alt="Admin" class="rounded-circle" width="150">
+              {% for i in employee %}
+              <div class="mt-3">
+                <h4>{{i.name}} {{i.surname}}</h4>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="col-md-8">
+        <div class="card mb-3">
+          {% for i in employee %}
+          {% for m in employee_time %}
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0">Employee Id</h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                {{i.user}}
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0">Name</h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                {{i.name}}                
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0">Surname</h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                {{i.surname}}                
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0">Position</h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                {{i.position}}               
+               </div>
+            </div>
+            <hr>
+            
+            
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0">Employee Hours At Work</h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                {{m.emp_h_at_work}}
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0">Holiday Hours</h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                {{m.holiday_h}}                
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0">Sick Hours</h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+              {{m.sick_h}}                
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+          {% endfor %}
+        </div>
+       
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+  </section>
+</div>
+{% endblock %}

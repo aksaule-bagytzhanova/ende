@@ -1,0 +1,102 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+    <!-- /.navbar -->
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Main content -->
+        <section class="content-header">
+        <div class="container-fluid">
+            <div class="card card-info">
+            <div class="card-header">
+                <h3 class="card-title"><b>Паспорт распределительного устройства 6/10-0,4кВ</b></h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- /.form-group -->
+                        <div class="form-group">
+                            <label for="organization">Организация</label>
+                            <input type="email" class="form-control" id="organization" placeholder="Организация">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="passport">№ Паспорта</label>
+                            <input type="email" class="form-control" id="passport" placeholder="№ Паспорта">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="passport">№ Наряд-допуска</label>
+                            <input type="email" class="form-control" id="passport" placeholder="№ Наряд-допуска">
+                        </div>
+                        <!-- /.form-group -->
+                    </div>
+                    <!-- /.col -->
+
+                    <div class="col-12 col-sm-6">
+                        <!-- /.form-group start-->
+                        <div class="form-group">
+                            <label for="department">Подразделение</label>
+                            <input type="email" class="form-control" id="department" placeholder="Подразделение">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="disName">Диспетчерское наименование</label>
+                            <input type="email" class="form-control" id="disName" placeholder="Диспетчерское наименование">
+                        </div>
+                        <!-- /.form-group -->
+                    </div>
+                    <!-- /.col -->
+                        <img src="{% static '/images/distribution_map.png' %}" alt="zru" width="500" height="300">
+                </div>
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- /.form-group -->
+                        <div class="form-group">
+                            <label for="data">Дата</label>
+                            <input type="data" class="form-control" id="data" placeholder="Дата">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sign">Подпись</label>
+                            <input type="sign" class="form-control" id="sign" placeholder="Подпись">
+                        </div>
+                        <!-- /.form-group -->
+                    </div>
+                    <!-- /.col -->
+
+                    <div class="col-12 col-sm-6">
+                        <!-- /.form-group start-->
+                        <div class="form-group">
+                            <label for="department">Ф.И.О. исполнителя</label>
+                            <input type="email" class="form-control" id="department" placeholder="Ф.И.О. исполнителя">
+                        </div>
+
+                        <!-- /.form-group -->
+                    </div>
+                    <!-- /.col -->
+                    <div class="form-group">
+                        <label>Сведения о ремонте (указать: тип оборудования, краткое описание ремонта, наладки, испытания, установка запчастей).</label>
+                        <textarea class="form-control" rows="3" placeholder="Сведения о ремонте"></textarea>
+                    </div>
+                </div>
+                <div class="card-footer">
+                <button type="submit" class="btn btn-info">Отправить на проверку</button>
+                </div>
+            </div>
+            <!-- /.card-info -->
+        </div>
+        <!-- /.container-fluid -->
+        </section>
+    </div>
+    <!-- /.content-wrapper -->
+</div>
+</body>
+</html>
+{% endblock %}

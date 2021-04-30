@@ -1,0 +1,75 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<div class="wrapper">
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Журнал распоряжении</h1>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+<style>
+  .uper {
+    margin-top: 40px;
+  }
+</style>
+<section class="content">
+<div class="card uper">
+  <div class="card-header">
+    Редактировать данные
+  </div>
+  <div class="card-body">
+
+      <div class="alert alert-danger">
+        <ul>
+        
+
+        </ul>
+      </div><br />
+
+      <form method="post" action="">
+          <div class="form-group">
+
+              <label for="measure">Технические мероприятия:</label>
+              <input type="text" class="form-control" name="measure" value=""/>
+          </div>
+          <div class="form-group">
+              <label for="place">Место и наименование работы:</label>
+              <input type="text" class="form-control" name="place" value=""/>
+          </div>
+          <div class="form-group">
+              <label for="operator">Производитель работ или наблюдающий (фамилия, инициалы, группа):</label>
+              <input type="text" class="form-control" name="operator" value=""/>
+          </div>
+          <div class="form-group">
+              <label for="mate">Члены бригады работающей по распоряжению (Ф.И.О. группа):</label>
+              <input type="text" class="form-control" name="mate" value=""/>
+          </div>
+          <div class="form-group">
+              <label for="authorizer">Лицо, отдавшее наряд, распоряжение (Ф.И.О., группа):</label>
+              <input type="text" class="form-control" name="authorizer" value=""/>
+          </div>
+          <div class="form-group">
+              <label for="start">К работе приступили (дата, время):</label>
+              <input type="text" class="form-control" name="start" value=""/>
+          </div>
+          <div class="form-group">
+              <label for="finish">Работа закончена (дата, время):</label>
+              <input type="text" class="form-control" name="finish" value=""/>
+          </div>
+          <button type="submit" class="btn btn-primary">Обновить данные</button>
+      </form>
+  </div>
+</div>
+</section>
+</div>
+<!-- /.content-wrapper -->
+</div>
+
+{% endblock %}

@@ -1,0 +1,80 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<div class="wrapper">
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Журнал распоряжении</h1>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- SELECT2 EXAMPLE -->
+          <div class="card card-info">
+              <div class="card-header">
+              <h3 class="card-title"><b>Список данных</b></h3>
+              </div>
+              <section class="content">
+              <div class="container-fluid">
+                <div class="card-body">
+                  <div class="uper">
+                    <div class="alert alert-success">
+                        
+                    </div><br />
+          
+                    <div class="card-body table-responsive p-0">
+                    <table class="table table-hover text-nowrap">
+                      <thead>
+                          <tr>
+                            <td>Номер распоряжения</td>
+                            <td>Технические мероприятия</td>
+                            <td>Место и наименование работ</td>
+                            <td>Производитель работ или наблюдающий (фамилия, инициалы, группа)</td>
+                            <td>Члены бригады, работающей по распоряжению (Ф.И.О., группа)</td>
+                            <td>Лицо, отдавшее наряд, распоряжение (Ф.И.О., группа)</td>
+                            <td>К работе приступили (дата, время)</td>
+                            <td>Работа закончена (дата, время)</td>
+                            <td>Действия</td>
+                          </tr>
+                      </thead>
+                      <tbody>
+                        {% for order in orders %}
+                          <tr>
+                            
+                              <td>{{order.number_naryad}}</td>
+                              <td>{{order.technical_activities}}</td>
+                              <td>{{order.place_name_work}}</td>
+                              <td>{{order.work_supervisor}}</td>
+                              <td>{{order.team_members}}</td>
+                              <td>{{order.person_give_naryad}}</td>
+                              <td>{{order.started_work}}</td>
+                              <td>{{order.work_done}}</td>
+                              <td><a href="{% url 'order_e' order.id %}" class="btn btn-primary">Правка</a></td>
+                          </tr>
+                          {% endfor %}
+                      </tbody>
+                    </table>
+                    </div>
+                    <td><a href="{% url 'order_a' %}" class="btn btn-secondary">Добавить</a></td>
+                  </div>
+              </div>
+            </div>
+          </div>
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+</div>
+
+
+  {% endblock %}

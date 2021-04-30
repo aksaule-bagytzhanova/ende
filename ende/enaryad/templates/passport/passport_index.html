@@ -1,0 +1,150 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+    <!-- /.navbar -->
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                    <h1>Паспорт эксплуатации</h1>
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+            <!-- SELECT2 EXAMPLE -->
+                <div class="card card-info">
+                <!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card-body">
+                                    <!-- we are adding the .class so bootstrap.js collapse plugin detects it -->
+                                    <div class="card card-info">
+                                        <div class="card-header">
+                                            <a href="{% url 'passport_isg' %}" class=nav-link>
+                                                ПАСПОРТ ЗРУ-6(10)кВ (КРУН-6: РП)-6/(10)кВ
+                                            </a>   
+                                        </div>
+                                    </div>
+                                    <div class="card card-info">
+                                        <div class="card-header">
+                                            <a href="{% url 'passport_cabel' %}" class=nav-link>
+                                                ПАСПОРТ кабельной линии 0,4Кв; 6/10кВ
+                                            </a>   
+                                        </div>
+                                    </div>
+                                    <div class="card card-info">
+                                        <div class="card-header">
+                                            <a href="{% url 'passport_mcc' %}" class=nav-link>
+                                                Паспорт шкафа силового управления 0,4кВ
+                                            </a>   
+                                        </div>
+                                    </div>
+                                    <div class="card card-info">
+                                        <div class="card-header">
+                                            <a href="{% url 'passport_substation' %}" class=nav-link>
+                                                ПАСПОРТ трансформаторной подстанции 6/0,4кВ
+                                            </a>   
+                                        </div>
+                                    </div>
+                                    <div class="card card-info">
+                                        <div class="card-header">
+                                            <a href="{% url 'passport_motor' %}" class=nav-link>
+                                                ПАСПОРТ электродвигателя 6/10-0,4кВ
+                                            </a>   
+                                        </div>
+                                    </div>
+                                    <div class="card card-info">
+                                        <div class="card-header">
+                                            <a href="{% url 'passport_uts' %}" class=nav-link>
+                                                ПАСПОРТ комплектной трансформаторной подстанции 6/10-0,4кВ
+                                            </a>   
+                                        </div>
+                                    </div>
+                                    <div class="card card-secondary">
+                                        <div class="card-header">
+                                            <a href="{% url 'passport_list' %}" class=nav-link>
+                                                Архив паспортов
+                                            </a>   
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-md-6">
+                                <div class="card-body">
+                                    <!-- we are adding the .class so bootstrap.js collapse plugin detects it -->
+                                    <div class="card card-info">
+                                        <div class="card-header">
+                                            <a href="{% url 'passport_circuit' %}" class=nav-link>
+                                                ПАСПОРТ блока управления электродвигателем 0,4кВ
+                                            </a>   
+                                        </div>
+                                    </div>
+                                    <div class="card card-info">
+                                        <div class="card-header">
+                                            <a href="{% url 'passport_distribution' %}" class=nav-link>
+                                                ПАСПОРТ распределительного устройства 6/10-0,4кВ
+                                            </a>   
+                                        </div>
+                                    </div>
+                                    <div class="card card-info">
+                                        <div class="card-header">
+                                            <a href="{% url 'passport_pg' %}" class=nav-link>
+                                                ПАСПОРТ защитного заземления
+                                            </a>   
+                                        </div>
+                                    </div>
+                                    <div class="card card-info">
+                                        <div class="card-header">
+                                            <a href="{% url 'passport_panel' %}" class=nav-link>
+                                                ПАСПОРТ ШР 0,4кВ
+                                            </a>   
+                                        </div>
+                                    </div>
+                                    <div class="card card-info">
+                                        <div class="card-header">
+                                            <a href="{% url 'passport_indoor' %}" class=nav-link>
+                                                ПАСПОРТ замерного устройства
+                                            </a>   
+                                        </div>
+                                    </div>
+                                    <div class="card card-info">
+                                        <div class="card-header">
+                                            <a href="{% url 'passport_blade' %}" class=nav-link>
+                                                Паспорт высоковольтной кабельной линии
+                                            </a>   
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+</div>
+<!-- ./wrapper -->
+</body>
+</html>
+
+{% endblock %}
