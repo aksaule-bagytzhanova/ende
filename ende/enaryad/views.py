@@ -15,6 +15,12 @@ from .decorators import allowed_users, unauthenticated_user, admin_only
 # Create your views here.
 
 @login_required(login_url='login')
+def mainpage(request):
+
+    return render(request, 'mainpage.html')
+
+
+@login_required(login_url='login')
 def enar(request):
     
     return render(request, 'enar.html')
@@ -42,8 +48,7 @@ def close_nar_page1(request):
 @login_required(login_url='login')
 def order_index(request):
     orders = Order.objects.all()
-    print(orders)
-    print(connection.queries)
+
     
 
     context={'orders':orders}

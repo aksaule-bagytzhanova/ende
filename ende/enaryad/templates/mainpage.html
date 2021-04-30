@@ -1,0 +1,295 @@
+{% extends 'main.html' %}
+{% block content %}
+{% load static %}
+
+  <div class="content-wrapper">
+    <div class="container-fluid">
+      <img src="{% static '/images/KMGgold.png' %}" alt="eightgold" width="1100" height="600">
+    </div>
+  </div>
+<div class="content-wrapper">
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark"></h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Последние новости</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-0">
+                <ul class="products-list product-list-in-card pl-2 pr-2">
+                  <li class="item">
+                    <div class="product-img">
+                      <img src="{% static '/images/siemens.jpg' %}" alt="Product Image" class="img-size-50">
+                    </div>
+                    <div class="product-info">
+                      <a href="javascript:void(0)" class="product-title">07.01.2022 Ветрогенераторы</a>
+                      <span class="product-description">
+                        ТОО "МЭМ" выразил своё согласие начать с Siemens-Gamesa начать выпуск ветрогенераторов в Казахстане
+                      </span>
+                    </div>
+                  </li>
+                  <!-- /.item -->
+                  <li class="item">
+                    <div class="product-img">
+                      <img src="{% static '/images/tesla.png' %}" alt="Product Image" class="img-size-50">
+                    </div>
+                    <div class="product-info">
+                      <a href="javascript:void(0)" class="product-title">07.07.2021 Солнечные панели</a>
+                      <span class="product-description">
+                      Tesla совместно с ТОО "МЭМ" открывает производство солнечных панелей в Казахстане
+                      </span>
+                    </div>
+                  </li>
+                  <!-- /.item -->
+                  <li class="item">
+                    <div class="product-img">
+                      <img src="{% static '/images/drive.jpg' %}" alt="Product Image" class="img-size-50">
+                    </div>
+                    <div class="product-info">
+                      <a href="javascript:void(0)" class="product-title">
+                      07.01.2021 Двигатели</a>
+                      <span class="product-description">
+                      Открытие производства двигателей на базе ТОО "Мангистауэнергомунай"
+                      </span>
+                    </div>
+                  </li>
+                  <!-- /.item -->
+                  <li class="item">
+                    <div class="product-img">
+                      <img src="{% static '/images/danfoss.jpg' %}" alt="Product Image" class="img-size-50">
+                    </div>
+                    <div class="product-info">
+                      <a href="javascript:void(0)" class="product-title">07.07.2020 ЧРП</a>
+                      <span class="product-description">
+                        Открытие сборочного производства ЧРП в партнерстве с компанией Danfoss
+                      </span>
+                    </div>
+                  </li>
+                  <!-- /.item -->
+                </ul>
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer text-center">
+                <a href="https://www.mem.llp.kz/ru/news/events" class="uppercase">Смотреть все новости</a>
+              </div>
+              <!-- /.card-footer -->
+            </div>
+                <!-- /.card -->
+                
+              <div class="card">
+              <div class="card-header border-transparent">
+                <h3 class="card-title">Законодательные нормативы</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-0">
+                <div class="table-responsive">
+                  <table class="table m-0">
+                    <thead>
+                    <tr>
+                      <th>Действие</th>
+                      <th>Название</th>
+                      <th>Ссылка</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td>Об энергосбережении и повышении энергоэффективности</td>
+                      <td>
+                        <div class="sparkbar" data-color="#00a65a" data-height="20">Закон РК от 13 января 2012г. № 541-iv</div>
+                      </td>
+                      <td><a href="pages/examples/invoice.html">Скачать</a></td>
+                    </tr>
+                    <tr>
+                      <td>Об электроэнергетике</td>
+                      <td>
+                        <div class="sparkbar" data-color="#f39c12" data-height="20">Закон РК от 9 июля 2004г. №588-II</div>
+                      </td>
+                      <td><a href="pages/examples/invoice.html">Скачать</a></td>
+                    </tr>
+                    <tr>
+                      <td>Трудовой Кодекс РК</td>
+                      <td>
+                        <div class="sparkbar" data-color="#f56954" data-height="20">Закон РК от 23 ноября 2015г. №414-v</div>
+                      </td>
+                      <td><a href="pages/examples/invoice.html">Скачать</a></td>
+                    </tr>
+                    <tr>
+                      <td>О гражданской защите</td>
+                      <td>
+                        <div class="sparkbar" data-color="#00c0ef" data-height="20">Закон РК от 11 апреля 2014г. №188-v</div>
+                      </td>
+                      <td><a href="pages/examples/invoice.html">Скачать</a></td>
+                    </tr>
+                    <tr>
+                      <td>Правила пожарной безопасности для энергетических предприятии</td>
+                      <td>
+                        <div class="sparkbar" data-color="#00c0ef" data-height="20">от 20 февраля 2015г. №123</div>
+                      </td>
+                      <td><a href="pages/examples/invoice.html">Скачать</a></td>
+                    </tr>
+                    <tr>
+                      <td>Правила работы с персоналом в энергетических организациях РК</td>
+                      <td>
+                        <div class="sparkbar" data-color="#00c0ef" data-height="20">от 26 марта 2015г. №234</div>
+                      </td>
+                      <td><a href="pages/examples/invoice.html">Скачать</a></td>
+                    </tr>
+                    <tr>
+                      <td>Правила ТБ при эксплуатации электроустановок</td>
+                      <td>
+                        <div class="sparkbar" data-color="#00c0ef" data-height="20">от 31 марта 2015г. №253</div>
+                      </td>
+                      <td><a href="pages/examples/invoice.html">Скачать</a></td>
+                    </tr>
+                    <tr>
+                      <td>Правила технической эксплуатации электроустановок потребителей</td>
+                      <td>
+                        <div class="sparkbar" data-color="#00c0ef" data-height="20">от 30 марта 2015г. №246</div>
+                      </td>
+                      <td><a href="pages/examples/invoice.html">Скачать</a></td>
+                    </tr>
+                    <tr>
+                      <td>Правила устройства электроустановок</td>
+                      <td>
+                        <div class="sparkbar" data-color="#00c0ef" data-height="20">от 20 марта 2015г. №230</div>
+                      </td>
+                      <td><a href="pages/examples/invoice.html">Скачать</a></td>
+                    </tr>
+                    <tr>
+                      <td>Правила ТБ при эксплуатации электроустановок потребителей</td>
+                      <td>
+                        <div class="sparkbar" data-color="#00c0ef" data-height="20">от 19 марта 2015г. №222</div>
+                      </td>
+                      <td><a href="pages/examples/invoice.html">Скачать</a></td>
+                    </tr>
+                    <tr>
+                      <td>Правила обеспечения промышленной безопасности при эксплуатации грузоподъемных механизмов</td>
+                      <td>
+                        <div class="sparkbar" data-color="#00c0ef" data-height="20">от 30 декабря 2014г. №359</div>
+                      </td>
+                      <td><a href="pages/examples/invoice.html">Скачать</a></td>
+                    </tr>
+                    <tr>
+                      <td>Правила обеспечения промышленной безопасности при эксплуатации, работающего под давлением</td>
+                      <td>
+                        <div class="sparkbar" data-color="#00c0ef" data-height="20">от 30 декабря 2014г. №358</div>
+                      </td>
+                      <td><a href="pages/examples/invoice.html">Скачать</a></td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /.table-responsive -->
+              </div>
+              <!-- /.card-body -->
+            </div>
+                <!-- /.card -->
+              </div>
+              <!-- /.col-md-6 -->
+              <div class="col-lg-6">
+                <div class="card">
+                <div class="card-header border-0">
+                    <h3 class="card-title">Статистика</h3>
+                    <div class="card-tools">
+                      <a href="#" class="btn btn-sm btn-tool">
+                        <i class="fas fa-download"></i>
+                      </a>
+                      <a href="#" class="btn btn-sm btn-tool">
+                        <i class="fas fa-bars"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center border-bottom mb-3">
+                      <p class="text-success text-xl">
+                        <i class="ion ion-ios-refresh-empty"></i>
+                      </p>
+                      <p class="d-flex flex-column text-right">
+                        <span class="font-weight-bold">
+                          <i class="ion ion-android-arrow-up text-success"></i> 12%
+                        </span>
+                        <span class="text-muted">Количество выданных нарядов</span>
+                      </p>
+                    </div>
+                    <!-- /.d-flex -->
+                    <div class="d-flex justify-content-between align-items-center border-bottom mb-3">
+                      <p class="text-success text-xl">
+                        <i class="ion ion-ios-refresh-empty"></i>
+                      </p>
+                      <p class="d-flex flex-column text-right">
+                        <span class="font-weight-bold">
+                          <i class="ion ion-android-arrow-up text-success"></i> 0.8%
+                        </span>
+                        <span class="text-muted">Количество скачанных документов</span>
+                      </p>
+                    </div>
+                    <!-- /.d-flex -->
+                    <div class="d-flex justify-content-between align-items-center mb-0">
+                      <p class="text-success text-xl">
+                        <i class="ion ion-ios-people-outline"></i>
+                      </p>
+                      <p class="d-flex flex-column text-right">
+                        <span class="font-weight-bold">
+                          <i class="ion ion-android-arrow-up text-success"></i> 1%
+                        </span>
+                        <span class="text-muted">Количество зарегистрированных пользователей</span>
+                      </p>
+                    </div>
+                    <!-- /.d-flex -->
+                  </div>
+                </div>
+              </div>
+              <!-- /.col-md-6 -->
+            </div>
+                  <div class="card-body">
+                    <div class="position-relative mb-4">
+                      <div class="chartjs-size-monitor">
+                        <div class="chartjs-size-monitor-expand">
+                          <div class=""></div>
+                        </div>
+                      <div class="chartjs-size-monitor-shrink">
+                    <div class="">
+                  </div>
+                </div>
+              </div>
+                    </div>
+                   </div>
+                </div>
+                <!-- /.card -->
+   
+
+
+
+{% endblock %}
