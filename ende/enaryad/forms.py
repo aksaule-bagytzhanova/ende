@@ -21,7 +21,7 @@ class OrderForm(ModelForm):
             'number_naryad': widgets.NumberInput(attrs={'class':'form-control'}),
             'technical_activities': widgets.TextInput(attrs={'class':'form-control'}),
             'place_name_work': widgets.TextInput(attrs={'class':'form-control'}),
-            'work_supervisor': widgets.Select(attrs={'class':'form-control select2'}),
+            'work_supervisor': widgets.Select(attrs={'class':'form-control select2', 'style':'width: 100%;'}),
             'team_members': widgets.SelectMultiple(attrs={'class':"form-control select2 selectpicker", 'multiple data-live-search':"true"}),
             'person_give_naryad': widgets.Select(attrs={'class':'form-control select2'}),
             'started_work': widgets.DateInput(attrs={'class':'form-control','id':"start_date", 'placeholder':"Date", 'type':"date"}),
