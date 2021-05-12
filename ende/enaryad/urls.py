@@ -8,6 +8,7 @@ urlpatterns = [
     path('logout/', views.logOutPage, name='logOut'),
     path('', views.mainpage, name='main'),
     path('enar/', views.enar,name='enar'),
+    path('main_information', views.mainpage, name="main_page"),
     path('create_nar/', views.create_nar_page1, name='create_nar_page1'),
     path('open_nar/', views.open_nar_page1, name='open_nar_page1'),
     path('close_nar/', views.close_nar_page1, name='close_nar_page1'),
@@ -32,5 +33,6 @@ urlpatterns = [
     path('plan_index', views.plan_index, name='plan_index'),
     path('mess_index', views.messages_index, name='mess_index'),
     path('account_s', views.accountSettings, name='account_s'),
+
 
 ]
