@@ -6,9 +6,8 @@ from . import views
 urlpatterns = [
     path('login/', views.loginPage, name='login'),
     path('logout/', views.logOutPage, name='logOut'),
-    path('', views.mainpage, name='main'),
-    path('enar/', views.enar,name='enar'),
-    path('main_information', views.mainpage, name="main_page"),
+    path('', views.mainpage, name='main_page'),
+    path('enaryad/', views.enar,name='enar'),
     path('create_nar/', views.create_nar_page1, name='create_nar_page1'),
     path('open_nar/', views.open_nar_page1, name='open_nar_page1'),
     path('close_nar/', views.close_nar_page1, name='close_nar_page1'),

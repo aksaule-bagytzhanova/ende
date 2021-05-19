@@ -195,13 +195,6 @@ def logOutPage(request):
     logout(request)
     return redirect('login')
 
-@login_required(login_url='login')
-@allowed_users(allowed_roles=['admin'])
-def employee_list(request):
-    employee = Employee.objects.all()
-    employee_time = Employee_Time.objects.all()
-    context={'employee':employee, 'employee_time':employee_time}
-    return render(request, 'employee_list.html', context)
 
 
 @login_required(login_url='login')
