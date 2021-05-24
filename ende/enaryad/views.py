@@ -201,8 +201,7 @@ def logOutPage(request):
 @allowed_users(allowed_roles=['admin'])
 def employee(request,pk_test):
     employee = Employee.objects.filter(id=pk_test)
-    employee_time = Employee_Time.objects.filter(id=pk_test)
-    context={'employee':employee, 'employee_time':employee_time}
+    context={'employee':employee}
     return render(request, 'employee.html', context)
 
 
