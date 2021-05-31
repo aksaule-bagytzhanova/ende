@@ -77,6 +77,15 @@ class Work_supervisor(models.Model):
     def __str__(self):
         return "%s" % (self.username)  
 
+class Biot_engineer(models.Model):
+    username = models.ForeignKey(Employee, null=True, on_delete=models.SET_NULL)
+    def __str__(self):
+        return "%s" % (self.username)
+
+class Deputy_head(models.Model):
+    username = models.ForeignKey(Employee, null=True, on_delete=models.SET_NULL)
+    def __str__(self):
+        return "%s" % (self.username) 
 
 
 class create_e_naryad_table_1(models.Model):
@@ -100,6 +109,8 @@ class create_e_naryad_table_1(models.Model):
     start_work = models.DateField()
     disconnected_where = models.TextField()
     enar_give = models.ForeignKey(Employee, null=True, on_delete=models.SET_NULL)
+    biot_engineer = models.ForeignKey(Biot_engineer, null=True, on_delete=models.SET_NULL)
+    deputy_head = models.ForeignKey(Deputy_head, null=True, on_delete=models.SET_NULL)
 
 class Order(models.Model):
     number_naryad = models.IntegerField()

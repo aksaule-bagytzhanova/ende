@@ -2,7 +2,7 @@ from django.forms import ModelForm, widgets
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.db.models import fields
-from .models import Employee, Order
+from .models import Employee, Order, create_e_naryad_table_1
 from django.core import validators
 
 from django import forms
@@ -29,3 +29,32 @@ class OrderForm(ModelForm):
 
         }
 
+class CreateNar1Form(ModelForm):
+    class Meta:
+        model = create_e_naryad_table_1
+        fields = ['organization', 'plot', 'admitting', 'team_members', 'category_of_work', 'emergency_preparedness_time', 'object', 'finish_work', 'name_electrical', 'separate_instructions', 'signature', 'subdivision', 'work_manager', 'manufacturer', 'observer', 'single_line_diagram', 'entrusted', 'start_work', 'disconnected_where', 'enar_give', 'biot_engineer', 'deputy_head']
+        widgets = {
+            'organization': widgets.Select(attrs={'class':'form-control select2'}),
+            'plot': widgets.Select(attrs={'class':'form-control select2'}),
+            'admitting': widgets.Select(attrs={'class':'form-control select2'}),
+            'team_members': widgets.SelectMultiple(attrs={'class':"form-control select2 selectpicker", 'multiple data-live-search':"true"}),
+            'category_of_work': widgets.Select(attrs={'class':'form-control select2'}),
+            'emergency_preparedness_time': widgets.DateInput(attrs={'class':'form-control','id':"start_date", 'placeholder':"Date", 'type':"date"}),
+            'object': widgets.Select(attrs={'class':'form-control select2'}),
+            'finish_work':  widgets.DateInput(attrs={'class':'form-control' ,'id':"start_date", 'placeholder':"Date", 'type':"date"}),
+            'name_electrical':widgets.Textarea(attrs={'class':'form-control', 'rows':'3', 'style':'margin-top: 0px; margin-bottom: 0px; height: 60px; width: 100%;'}),
+            'separate_instructions': widgets.Textarea(attrs={'class':'form-control', 'rows':'3', 'style':'margin-top: 0px; margin-bottom: 0px; height: 60px; width: 100%;'}),
+            'signature': widgets.FileInput(attrs={'class':'form-control custom-file', 'type':'file'}),
+            'subdivision': widgets.Select(attrs={'class':'form-control select2'}),
+            'work_manager': widgets.Select(attrs={'class':'form-control select2'}),
+            'manufacturer': widgets.Select(attrs={'class':'form-control select2'}),
+            'observer': widgets.Select(attrs={'class':'form-control select2'}),
+            'single_line_diagram': widgets.FileInput(attrs={'class':'form-control custom-file', 'type':'file'}),
+            'entrusted': widgets.Select(attrs={'class':'form-control select2'}),
+            'start_work': widgets.DateInput(attrs={'class':'form-control' ,'id':"start_date", 'placeholder':"Date", 'type':"date"}),
+            'disconnected_where': widgets.Textarea(attrs={'class':'form-control', 'rows':'3', 'style':'margin-top: 0px; margin-bottom: 0px; height: 60px; width: 100%;'}),
+            'enar_give': widgets.Select(attrs={'class':'form-control select2'}),
+            'biot_engineer':widgets.Select(attrs={'class':'form-control select2'}),
+            'deputy_head':widgets.Select(attrs={'class':'form-control select2'}),
+
+        }
