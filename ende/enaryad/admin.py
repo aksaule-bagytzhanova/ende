@@ -16,7 +16,6 @@ admin.site.register(Work_supervisor)
 admin.site.register(Manufacturer)
 admin.site.register(Observer)
 admin.site.register(Object)
-admin.site.register(Work_supervisor)
 admin.site.register(Biot_engineer)
 admin.site.register(Deputy_head)
 
