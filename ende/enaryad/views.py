@@ -47,7 +47,12 @@ def create_nar_page1(request):
 
 @login_required(login_url='login')
 def open_nar_page1(request):
-    return render(request, 'open_nar_page1.html')
+
+    show_nar = create_e_naryad_table_1.objects.all()
+    number = create_e_naryad_table_1.objects.count()
+
+    context={'show_nar':show_nar, 'number':number}
+    return render(request, 'open_nar_page1.html', context)
 
 
 

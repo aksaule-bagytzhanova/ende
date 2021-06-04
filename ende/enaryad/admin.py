@@ -18,5 +18,6 @@ admin.site.register(Observer)
 admin.site.register(Object)
 admin.site.register(Biot_engineer)
 admin.site.register(Deputy_head)
+admin.site.register(create_e_naryad_table_1)
 
 
