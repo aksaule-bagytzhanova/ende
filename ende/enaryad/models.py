@@ -89,34 +89,34 @@ class Deputy_head(models.Model):
 
 
 class create_e_naryad_table_1(models.Model):
-    organization = models.ForeignKey(Organization, null=True, on_delete=models.SET_NULL)
-    plot = models.ForeignKey(Plot, null=True, on_delete=models.SET_NULL)
-    admitting = models.ForeignKey(Admitting, null=True, on_delete=models.SET_NULL)
+    organization = models.ManyToManyField(Organization, null=True)
+    plot = models.ManyToManyField(Plot, null=True)
+    admitting = models.ManyToManyField(Admitting, null=True)
     team_members = models.ManyToManyField(Team_members)
-    category_of_work = models.ForeignKey(Category_of_work, null=True, on_delete=models.SET_NULL)
+    category_of_work = models.ManyToManyField(Category_of_work, null=True)
     emergency_preparedness_time = models.DateField()
-    object = models.ForeignKey(Object, null=True, on_delete=models.SET_NULL)
+    object = models.ManyToManyField(Object, null=True)
     finish_work = models.DateField()
     name_electrical = models.TextField()
     separate_instructions = models.TextField()
     signature = models.ImageField(null=True, blank=True)
-    subdivision = models.ForeignKey(Subdivision, null=True, on_delete=models.SET_NULL)
-    work_manager = models.ForeignKey(Work_manager, null=True, on_delete=models.SET_NULL)
-    manufacturer = models.ForeignKey(Manufacturer, null=True, on_delete=models.SET_NULL)
-    observer = models.ForeignKey(Observer, null=True, on_delete=models.SET_NULL)
+    subdivision = models.ManyToManyField(Subdivision, null=True)
+    work_manager = models.ManyToManyField(Work_manager, null=True)
+    manufacturer = models.ManyToManyField(Manufacturer, null=True)
+    observer = models.ManyToManyField(Observer, null=True)
     single_line_diagram = models.ImageField(null=True, blank=True)
-    entrusted = models.ForeignKey(Entrusted, null=True, on_delete=models.SET_NULL)
+    entrusted = models.ManyToManyField(Entrusted, null=True)
     start_work = models.DateField()
     disconnected_where = models.TextField()
     enar_give = models.ForeignKey(Employee, null=True, on_delete=models.SET_NULL)
-    biot_engineer = models.ForeignKey(Biot_engineer, null=True, on_delete=models.SET_NULL)
-    deputy_head = models.ForeignKey(Deputy_head, null=True, on_delete=models.SET_NULL)
+    biot_engineer = models.ManyToManyField(Biot_engineer, null=True)
+    deputy_head = models.ManyToManyField(Deputy_head, null=True)
 
 class Order(models.Model):
     number_naryad = models.IntegerField()
     technical_activities = models.CharField(max_length=200, null=True)
     place_name_work = models.CharField(max_length=200, null=True)
-    work_supervisor = models.ForeignKey(Work_supervisor, null=True, on_delete=models.SET_NULL)
+    work_supervisor = models.ManyToManyField(Work_supervisor, null=True)
     team_members = models.ManyToManyField(Team_members)
     person_give_naryad =  models.ForeignKey(Employee, null=True, on_delete=models.SET_NULL)
     started_work = models.DateField()
@@ -125,6 +125,8 @@ class Order(models.Model):
     def __str__(self):
         return self.number_naryad
 
+
+    
 
     
 
