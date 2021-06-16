@@ -31,9 +31,8 @@ def enar(request):
 def create_nar_page1(request):
     form = CreateNar1Form()
     
-
     if request.method == 'POST':
-        # print('Printing POST: ', request.POST)
+        
         form = CreateNar1Form(request.POST, request.FILES)
         if form.is_valid():
             form.save()
@@ -220,8 +219,6 @@ def employee(request,pk_test):
     employee = Employee.objects.filter(id=pk_test)
     context={'employee':employee}
     return render(request, 'employee.html', context)
-
-
 
 
 
