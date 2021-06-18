@@ -10,6 +10,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from .decorators import allowed_users, unauthenticated_user, admin_only
+from django.forms import inlineformset_factory
 
 
 # Create your views here.
@@ -29,11 +30,12 @@ def enar(request):
 
 @login_required(login_url='login')
 def create_nar_page1(request):
-    form = CreateNar1Form()
+    enar_give = request.user.employee
+    form = CreateNar1Form(initial={'enar_give':enar_give}, instance=enar_give)
     
     if request.method == 'POST':
         
-        form = CreateNar1Form(request.POST, request.FILES)
+        form = CreateNar1Form(request.POST, request.FILES, instance=enar_give)
         if form.is_valid():
             form.save()
             return redirect('main_page')

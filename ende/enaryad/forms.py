@@ -58,3 +58,18 @@ class CreateNar1Form(ModelForm):
             'deputy_head':widgets.Select(attrs={'class':'form-control select2'}),
 
         }
+
+    def __init__(self, *args, **kwargs):
+        super(CreateNar1Form, self).__init__(*args, **kwargs)
+        self.fields['organization'].empty_label = "--- Выберите значение ---"
+        self.fields['plot'].empty_label = "--- Выберите значение ---"
+        self.fields['admitting'].empty_label = "--- Выберите значение ---"
+        self.fields['category_of_work'].empty_label = "--- Выберите значение ---"
+        self.fields['object'].empty_label = "--- Выберите значение ---"
+        self.fields['subdivision'].empty_label = "--- Выберите значение ---"
+        self.fields['work_manager'].empty_label = "--- Выберите значение ---"
+        self.fields['manufacturer'].empty_label = "--- Выберите значение ---"
+        self.fields['observer'].empty_label = "--- Выберите значение ---"
+        self.fields['entrusted'].empty_label = "--- Выберите значение ---"
+        self.fields['biot_engineer'].empty_label = "--- Выберите значение ---"
+        self.fields['deputy_head'].empty_label = "--- Выберите значение ---"
